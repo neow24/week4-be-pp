@@ -11,11 +11,11 @@
 let tourArray = [];
 let nextId = 1;
 
-const getAll = () => {
+function getAll() {
   return tourArray;
 };
 
-const addOne = (name, info, image, price) => {
+function addOne(name, info, image, price) {
   if (!name | !info | !image | !price) {
     return false;
   }
@@ -30,14 +30,14 @@ const addOne = (name, info, image, price) => {
   return newTour;
 };
 
-const findById = (id) => {
+function findById(id) {
   const tour = tourArray.find((tour) => tour.id === Number(id));
   if (tour) {
     return tour;
   } else return false;
 };
 
-const updateOneById = (id, updatedData) => {
+function updateOneById(id, updatedData) {
   const tour = findById(id);
   if (tour) {
     if (updatedData.name) {
@@ -57,7 +57,7 @@ const updateOneById = (id, updatedData) => {
   return false;
 };
 
-const deleteOneById = (id) => {
+function deleteOneById(id) {
   const tour = findById(id);
   if (tour) {
     const initialLenght = tourArray.length;
