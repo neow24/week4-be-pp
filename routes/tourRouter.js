@@ -7,7 +7,7 @@ const {
   createTour,
   updateTour,
   deleteTour,
-} = require("./tourControllers.js"); 
+} = require("../controllers/tourControllers.js"); 
 
 // GET /tours
 router.get("/tours", getAllTours);
